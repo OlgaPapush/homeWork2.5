@@ -1,3 +1,5 @@
+package ProductList;
+
 import java.util.Objects;
 
 public class Product {
@@ -5,20 +7,16 @@ public class Product {
     private final int price;
     private final int amount;
 
-
     public Product(String name, int price, int amount) {
         if (name != null && !name.isBlank() && !name.isEmpty() && !(price > 0)) {
             this.name = name;
             this.price = price;
             this.amount = amount;
-            addProductToList(this);
+            ProductList.addProductToList(this);
         } else {
             throw new RuntimeException("Проверь позицию товара" + name);
         }
     }
-
-
-
 
     public String getName() {
         return name;
@@ -33,7 +31,6 @@ public class Product {
     }
 
 
-
     @Override
     public String toString() {
         return "Список продуктов{" +
@@ -42,7 +39,6 @@ public class Product {
                 ", количество " + getAmount() +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {
