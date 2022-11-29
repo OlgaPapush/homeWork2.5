@@ -2,10 +2,12 @@ package ProductList;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class ProductList {
-    public static Set<Product> productList = new HashSet<>();
+    public static Map<String getName,  int getPriceprice> productList = new HashMap<>();
+
 
     public static void printListOfProduct() {
         System.out.println("Список");

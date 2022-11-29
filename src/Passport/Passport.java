@@ -18,6 +18,9 @@ public class Passport {
         this.localDate = localDate;
     }
 
+    public static void addPassport(Passport passport) {
+    }
+
     public int getNumber() {
         return number;
     }

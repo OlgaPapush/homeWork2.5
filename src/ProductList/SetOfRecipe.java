@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class SetOfRecipe {
-    public static Set<Recipe> recipe = new HashSet<>();
+    public static Map<Product, Integer> recipe = new HashMap<>();
 
     public static void addRecipe(Recipe recipe) {
         for (var recipeInCollection : recipe) {
@@ -18,6 +18,26 @@ public class SetOfRecipe {
         }
         recipe.add(recipe);
     }
+
+    public void addProduct(Product product, int amount) {
+        if (amount <= 0){
+            amount = 1;}
+        if (this.products.containsKey(product)) {
+            this.products.put(product, this.products.get(product) + quantity)
+        } else {
+            this.products.put(product, quantity);
+        }
+    }
+    public float getRecipePrice() {
+        float sum = 0;
+        for (Map.Entry<Product, Integer> product : this.products.entrySet())
+        sum += product.getKey().product.getPrice * product.getValue(); {
+            sum == product.getPrice();
+        }
+        return sum;
+    }
+
+
 
     public static void printAllRecipe() {
         System.out.println("Книга рецептов");
